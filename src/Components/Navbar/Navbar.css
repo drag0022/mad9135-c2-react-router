@@ -1,0 +1,22 @@
+.navLink {
+	padding-top: 1rem;
+}
+
+ul {
+	list-style-type: none;
+}
+
+@media screen and (max-width: 500px) {
+	ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: flex-start;
+		list-style-type: none;
+		margin-left: -5rem;
+	}
+	.navLink {
+		margin-left: 3rem;
+		text-decoration: none;
+	}
+}

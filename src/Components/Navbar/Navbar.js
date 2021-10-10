@@ -1,28 +1,27 @@
 import './Navbar.css';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import Userlist from '../Userlist/Userlist';
-import Addresslist from '../Addresslist/Addresslist';
-import User from '../User/User';
-import Home from '../Home/Home';
+
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar(props) {
 	return (
-		<>
-			<Switch>
-				<Route path="/users">
-					<Userlist />
-				</Route>
-				<Route path="/users/:id">
-					<User />
-				</Route>
-				<Route path="/addresses">
-					<Addresslist />
-				</Route>
-				<Route path="/" exact>
-					<Home />
-				</Route>
-				<Redirect to="/" />
-			</Switch>
-		</>
+		<nav className="nav">
+			<ul>
+				<li className="navLink">
+					<NavLink activeClassName="active" to="/" exact>
+						Home
+					</NavLink>
+				</li>
+				<li className="navLink">
+					<NavLink activeClassName="active" to="/users">
+						User List
+					</NavLink>
+				</li>
+				<li className="navLink">
+					<NavLink activeClassName="active" to="/addresses">
+						Address List
+					</NavLink>
+				</li>
+			</ul>
+		</nav>
 	);
 }
