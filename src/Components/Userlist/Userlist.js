@@ -1,5 +1,7 @@
 import './Userlist.css';
 import { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
+import User from '../User/User';
 import UserCard from '../UserCard/UserCard';
 
 export default function Userlist(props) {
@@ -21,10 +23,11 @@ export default function Userlist(props) {
 	return (
 		<div className="userList">
 			{userList.length === 0 && <p>LOADING....</p>}
-			{userList.map((user) => (
+			<h3>[The Facebook] User List</h3>
+			{userList.map((user, index) => (
 				// build user card
 				<div key={user.name.first}>
-					<UserCard user={user} />
+					<UserCard user={user} userList={userList} index={index} />
 				</div>
 			))}
 		</div>

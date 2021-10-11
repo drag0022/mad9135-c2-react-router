@@ -6,21 +6,17 @@ export default function Navbar(props) {
 	return (
 		<nav className="nav">
 			<ul>
-				<li className="navLink">
-					<NavLink activeClassName="active" to="/" exact>
-						Home
-					</NavLink>
-				</li>
-				<li className="navLink">
-					<NavLink activeClassName="active" to="/users">
-						User List
-					</NavLink>
-				</li>
-				<li className="navLink">
-					<NavLink activeClassName="active" to="/addresses">
-						Address List
-					</NavLink>
-				</li>
+				<NavLink activeClassName="active" to="/" exact>
+					<li className="navLink">Home</li>
+				</NavLink>
+
+				<NavLink activeClassName="active" to="/users">
+					<li className="navLink">User List</li>
+				</NavLink>
+
+				<NavLink activeClassName="active" to="/addresses">
+					<li className="navLink">Address List</li>
+				</NavLink>
 			</ul>
 		</nav>
 	);

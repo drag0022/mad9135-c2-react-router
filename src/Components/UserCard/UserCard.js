@@ -1,13 +1,8 @@
 import './UserCard.css';
-import { useState, useEffect } from 'react';
-
+import { NavLink } from 'react-router-dom';
+import User from '../User/User';
 export default function UserCard(props) {
-	const [user, setUser] = useState([]);
-	console.log(props.user);
-	useEffect(() => {
-		setUser(props.user);
-		//console.log(props.user);
-	}, [props.user]);
+	console.log(props.userList);
 
 	return (
 		<div className="UserCardContainer">
@@ -20,6 +15,11 @@ export default function UserCard(props) {
 				<p className="userName">{`${props.user.name.first} ${props.user.name.last}`}</p>
 				<p className="userEmail">{props.user.email}</p>
 				<p className="userCell">{props.user.phone}</p>
+				<NavLink
+					to={{ pathname: `/users/${props.index}`, userList: props.userList }}
+				>
+					<p className="seeDetails">See details</p>
+				</NavLink>
 			</div>
 		</div>
 	);

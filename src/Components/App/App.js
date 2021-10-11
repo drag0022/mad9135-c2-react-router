@@ -14,7 +14,7 @@ export default function App(props) {
 			</header>
 			<main>
 				<Switch>
-					<Route path="/users">
+					<Route path="/users" exact>
 						<Userlist />
 					</Route>
 					<Route path="/users/:id">

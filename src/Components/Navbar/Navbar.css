@@ -1,22 +1,33 @@
 .navLink {
-	padding-top: 1rem;
+	padding: 1rem;
+	margin-top: 1rem;
+	background-color: rgb(235, 255, 254);
+}
+
+.navLink:hover {
+	background-color: rgb(235, 240, 254);
 }
 
 ul {
 	list-style-type: none;
+	margin-top: 4rem;
+}
+
+a {
+	text-decoration: none;
 }
 
 @media screen and (max-width: 500px) {
 	ul {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
-		align-items: flex-start;
+		justify-content: center;
+		align-items: center;
 		list-style-type: none;
 		margin-left: -5rem;
+		margin-top: 0rem;
 	}
 	.navLink {
 		margin-left: 3rem;
-		text-decoration: none;
 	}
 }
