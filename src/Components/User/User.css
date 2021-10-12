@@ -1,0 +1,18 @@
+.userDetailsContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	min-height: 100vh;
+	margin: 4rem 1rem 0 1rem;
+
+	background-color: rgb(235, 255, 254);
+}
+.userMoreInfo {
+	display: flex;
+	width: 100%;
+	margin-top: 2rem;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}

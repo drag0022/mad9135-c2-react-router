@@ -1,9 +1,6 @@
 import './UserCard.css';
 import { NavLink } from 'react-router-dom';
-import User from '../User/User';
 export default function UserCard(props) {
-	console.log(props.userList);
-
 	return (
 		<div className="UserCardContainer">
 			<img
@@ -16,7 +13,10 @@ export default function UserCard(props) {
 				<p className="userEmail">{props.user.email}</p>
 				<p className="userCell">{props.user.phone}</p>
 				<NavLink
-					to={{ pathname: `/users/${props.index}`, userList: props.userList }}
+					to={{
+						pathname: `/users/${props.index}`,
+						user: props.userList[props.index],
+					}}
 				>
 					<p className="seeDetails">See details</p>
 				</NavLink>

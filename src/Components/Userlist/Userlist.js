@@ -22,7 +22,7 @@ export default function Userlist(props) {
 
 	return (
 		<div className="userList">
-			{userList.length === 0 && <p>LOADING....</p>}
+			{userList.length === 0 && <div className="loadingSpinner"></div>}
 			<h3>[The Facebook] User List</h3>
 			{userList.map((user, index) => (
 				// build user card
