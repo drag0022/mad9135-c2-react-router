@@ -2,6 +2,7 @@ import './Navbar.css';
 
 import { NavLink } from 'react-router-dom';
 
+//Navigation component. Handles link between routing server and DOM
 export default function Navbar(props) {
 	return (
 		<nav className="nav">

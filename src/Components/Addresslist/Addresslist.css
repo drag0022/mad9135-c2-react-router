@@ -1,0 +1,13 @@
+table {
+	padding: 1rem;
+}
+
+thead > tr > th {
+	font-weight: bold;
+	border: 2px solid black;
+}
+
+tbody > tr > th {
+	font-weight: normal;
+	border-bottom: 1px solid black;
+}

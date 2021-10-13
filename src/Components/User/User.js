@@ -1,10 +1,11 @@
 import './User.css';
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
+//User details component. Deals with showing detailed information about the user. Used by <Userlist /> and <Addresslist />
 export default function User(props) {
-	let { user } = useLocation();
 	let { id } = useParams();
+	const user = props.userList[id];
 	console.log(id);
-	console.log(user);
 	return (
 		<div className="userDetailsContainer">
 			<div className="userBasicInfo">
@@ -26,9 +27,10 @@ export default function User(props) {
 					<p>Country: {user.location.country}</p>
 				</div>
 				<div className="userLogin">
-					<p>UUID: {user.id.name}</p>
-					<p>Username: {user.id.name}</p>
-					<p>Password: {user.id.value}</p>
+					{/* if there is no login info available, display N/A */}
+					<p>UUID: {user.id.name || 'N/A'}</p>
+					<p>Username: {user.id.name || 'N/A'}</p>
+					<p>Password: {user.id.value || 'N/A'}</p>
 				</div>
 			</div>
 		</div>

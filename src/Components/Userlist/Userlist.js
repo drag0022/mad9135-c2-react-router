@@ -1,33 +1,16 @@
 import './Userlist.css';
-import { useState, useEffect } from 'react';
-import { Route } from 'react-router-dom';
-import User from '../User/User';
 import UserCard from '../UserCard/UserCard';
 
+//User list component. Gets data from <App /> via props
 export default function Userlist(props) {
-	const [userList, setUserList] = useState([]);
-
-	async function fetchData() {
-		const URL =
-			'https://randomuser.me/api/?seed=drag0022&results=20&nat=au,ca,nz,gb,us';
-		let resp = await fetch(URL);
-		let data = await resp.json();
-		console.log(data.results);
-		setUserList(data.results);
-	}
-
-	useEffect(() => {
-		fetchData();
-	}, []);
-
 	return (
 		<div className="userList">
-			{userList.length === 0 && <div className="loadingSpinner"></div>}
+			{props.userList.length === 0 && <div className="loadingSpinner"></div>}
 			<h3>[The Facebook] User List</h3>
-			{userList.map((user, index) => (
+			{props.userList.map((user, index) => (
 				// build user card
 				<div key={user.name.first}>
-					<UserCard user={user} userList={userList} index={index} />
+					<UserCard user={user} index={index} />
 				</div>
 			))}
 		</div>

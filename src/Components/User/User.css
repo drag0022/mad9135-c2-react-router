@@ -16,3 +16,14 @@
 	justify-content: space-evenly;
 	align-items: flex-start;
 }
+
+@media screen and (max-width: 500px) {
+	.userMoreInfo {
+		width: 100%;
+		flex-direction: column;
+		margin-left: 2rem;
+	}
+	.userMoreInfo > div {
+		padding: 0.5rem;
+	}
+}
