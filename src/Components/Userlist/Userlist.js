@@ -6,7 +6,9 @@ export default function Userlist(props) {
 	return (
 		<div className="userList">
 			{props.userList.length === 0 && <div className="loadingSpinner"></div>}
-			<h3>[The Facebook] User List</h3>
+			<h3 className="title">
+				<span className="logo">[The Facebook]</span> User List
+			</h3>
 			{props.userList.map((user, index) => (
 				// build user card
 				<div key={user.name.first}>

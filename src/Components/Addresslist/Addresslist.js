@@ -5,7 +5,9 @@ import { NavLink } from 'react-router-dom';
 export default function Addresslist(props) {
 	return (
 		<>
-			<h3>[The Facebook] Address List</h3>
+			<h3 className="title">
+				<span className="logo">[The Facebook]</span>Address List
+			</h3>
 			<div className="addressTable">
 				<table>
 					<thead>

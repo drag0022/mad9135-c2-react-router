@@ -4,7 +4,9 @@ import './Home.css';
 export default function Home(props) {
 	return (
 		<div className="home">
-			<h3 className="welcome">Welcome to [The Facebook]</h3>
+			<h3 className="welcome">
+				Welcome to <span className="logo">[The Facebook]</span>
+			</h3>
 			<p className="instructions">
 				Use the navigation on the left to See a list of users and get details
 				about them.

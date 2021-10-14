@@ -24,10 +24,12 @@ a {
 		justify-content: center;
 		align-items: center;
 		list-style-type: none;
-		margin-left: -5rem;
+		margin-left: -10rem;
 		margin-top: 0rem;
 	}
 	.navLink {
 		margin-left: 3rem;
+		width: 100%;
+		text-align: center;
 	}
 }

@@ -1,13 +1,44 @@
+.title {
+	width: 50%;
+	text-align: center;
+}
+
+.logo {
+	color: rgb(0, 128, 255);
+}
+
 table {
 	padding: 1rem;
 }
 
+thead {
+	background-color: rgb(235, 255, 254);
+	height: 4rem;
+}
 thead > tr > th {
 	font-weight: bold;
-	border: 2px solid black;
+	border-bottom: 2px solid black;
 }
 
 tbody > tr > th {
 	font-weight: normal;
 	border-bottom: 1px solid black;
+	padding: 1rem;
+}
+
+tbody > tr:nth-child(2n) {
+	background-color: rgb(235, 255, 254);
+}
+
+tbody > tr:nth-child(2n + 1) {
+	background-color: rgb(235, 240, 254);
+}
+
+@media screen and (max-width: 500px) {
+	.title {
+		width: 100%;
+	}
+	tbody > tr > th {
+		padding: 0;
+	}
 }
