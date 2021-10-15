@@ -25,27 +25,30 @@ export default function App(props) {
 		fetchData();
 	}, []);
 	return (
-		<div className="App">
-			<header>
-				<Navbar />
-			</header>
-			<main>
-				<Switch>
-					<Route path="/users" exact>
-						<Userlist userList={userList} />
-					</Route>
-					<Route path="/users/:id">
-						<User userList={userList} />
-					</Route>
-					<Route path="/addresses">
-						<Addresslist userList={userList} />
-					</Route>
-					<Route path="/" exact>
-						<Home />
-					</Route>
-					<Redirect to="/" />
-				</Switch>
-			</main>
-		</div>
+		<>
+			{userList.length === 0 && <div className="loadingSpinner"></div>}
+			<div className="App">
+				<header>
+					<Navbar />
+				</header>
+				<main>
+					<Switch>
+						<Route path="/users" exact>
+							<Userlist userList={userList} />
+						</Route>
+						<Route path="/users/:id">
+							<User userList={userList} />
+						</Route>
+						<Route path="/addresses">
+							<Addresslist userList={userList} />
+						</Route>
+						<Route path="/" exact>
+							<Home />
+						</Route>
+						<Redirect to="/" />
+					</Switch>
+				</main>
+			</div>
+		</>
 	);
 }
